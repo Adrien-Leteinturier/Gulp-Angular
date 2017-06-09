@@ -1,0 +1,35 @@
+@import "sass/variables.scss";
+@import "sass/mixin.scss";
+
+
+.acme-navbar-text{
+  color: white;
+}
+
+a {
+  color: black;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0;
+  line-height: 1.25em;
+}
+
+a:hover, a:focus {
+  color: greenyellow;
+}
+.navbar{
+  padding:$padding10;
+}
+
+.navbar-nav li:nth-child(4) a {font-size: 1.3em;line-height: 24px;}
+
+.navbar-nav li:nth-child(1) a:hover {@include transition(background-color 1s .2s, color 2s);}
+.navbar-nav li:nth-child(1) a:hover {background-color:$yellow;color: $gray}
+.navbar-nav li:nth-child(2) a:hover {@include transition(background-color 1s .2s, color 2s);}
+.navbar-nav li:nth-child(2) a:hover {background-color:$saumon;color: $gray}
+.navbar-nav li:nth-child(3) a:hover {@include transition(background-color 1s .2s, color 2s);}
+.navbar-nav li:nth-child(3) a:hover {background-color:$purple;color: $gray}
+
+    

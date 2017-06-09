@@ -1,0 +1,48 @@
+<div class="container-fluid">
+
+  <div>
+    <acme-navbar creation-date="main.creationDate"></acme-navbar>
+  </div>
+
+  <section id="presentation" class="text-center">
+    <img ng-src="assets/images/dev-img-titre.png" alt="image developpeur fullstack javascript">
+    <p class="lead">
+      <img src="assets/images/photo-profil.png" alt="photo auteur"><br>
+    </p>
+    <p class="animated infinite" ng-class="main.classAnimation">
+      <button type="button" class="btn btn-lg btn-success" ng-click="main.showToastr()">Git Hub</button>
+    </p>
+  </section>
+  <section>
+    <div id="technos" class="row">
+      <div class="col-lg-2 col-md-2">
+      </div>
+      <div class="col-lg-1 col-md-1 noPadding" ng-repeat="awesomeTech in main.awesomeTechs">
+        <img class="img-responsive img-technos"  ng-src="{{awesomeTech.src}}" alt="{{awesomeTech.title}}">
+      </div>
+      <div class="col-lg-1 col-md-1">
+      </div>
+    </div>
+  </section>
+  <section id="services">
+    <div class="row">
+      <div class="col-lg-3 content-img" ng-repeat="awesomeThing in main.awesomeThings | orderBy:'rank'" >
+        <img class="img-services img-responsive" ng-src="assets/images/{{ awesomeThing.logo }}" alt="{{ awesomeThing.title }}" ng-init="main.activeDisplayEffect('.img-services', '.img-services' ,'animated bounceInUp')">
+        <div class="caption" ng-style="{ backgroundColor: awesomeThing.backGroundColor }" ng-init="main.activeDisplayEffect('.img-services', '.caption' ,'animated fadeInRight')">
+          <h3 ng-style="{ color: awesomeThing.colorTitle }">{{ awesomeThing.title }}</h3>
+          <p>{{ awesomeThing.description }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="titleReseaux row" ng-init="main.activeDisplayEffect('.titleReseaux', '.titleReseaux' ,'animated fadeInUp')"> 
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+      <h3>Retrouver moi sur les reseaux sociaux</h3>
+      <p>Cliquez sur un bandeau ! À toute suite...</p>
+    </div>
+  </div>
+  <facebook-directive></facebook-directive>
+  <twitter-directive></twitter-directive>
+  <footer-directive></footer-directive>
+
+</div>

@@ -1,0 +1,19 @@
+@import "sass/variables.scss";
+@import "sass/mixin.scss";
+
+
+
+footer{
+    background-color: $lightGray;
+    padding: $paddingLRtext; 
+}
+
+label[for="nom"]{
+    color: $yellow;
+}
+label[for="Email"]{
+    color: $saumon;
+}
+label[for="message"]{
+    color: $purple;
+}
