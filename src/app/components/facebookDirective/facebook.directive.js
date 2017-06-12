@@ -19,10 +19,11 @@ angular.module('app')
         $window.mozRequestAnimationFrame || // Pour Firefox.
         $window.ORequestAnimationFrame || // Pour Opera.
         $window.msRequestAnimationFrame // Pour Internet Explorer.az
+        
 
         var canvas = angular.element('canvas')[0]
         canvas.width = $window.innerWidth;
-        canvas.height = 250;
+        canvas.height = 500;
         var ctx = canvas.getContext('2d');
 
         var fond = new Image();   
@@ -52,7 +53,7 @@ angular.module('app')
         iconFb1.sLargeur = 325;
         iconFb1.sHauteur = 325;
         iconFb1.dx = -100;
-        iconFb1.dy = -20;
+        iconFb1.dy = 100;
         iconFb1.dLargeur = iconFb1.sLargeur;
         iconFb1.dHauteur = iconFb1.sHauteur;
         var iconFb01 = new Image();
@@ -63,7 +64,7 @@ angular.module('app')
         iconFb2.sLargeur = 163;
         iconFb2.sHauteur = 163;
         iconFb2.dx = -160;
-        iconFb2.dy = 0;
+        iconFb2.dy = 80;
         iconFb2.dLargeur = iconFb2.sLargeur;
         iconFb2.dHauteur = iconFb2.sHauteur;
         var iconFb02 = new Image();
@@ -126,6 +127,9 @@ angular.module('app')
             iconFb4.speed = 12;
             iconFb5.speed = 8; 
           });
+          angular.element('.closeFacebook').click(function(){
+            angular.element('#modal').iziModal('close');
+          })
         }
         clicCanvas();
 
