@@ -19,12 +19,10 @@ angular.module('app')
         function clicCanvas(){
           angular.element('#canvasTwitter').click(function(){
             angular.element('#modalTwitter').iziModal('open');
-            iconFb1.speed = 6;
-            iconFb2.speed = 10;
-            iconFb3.speed = 4;
-            iconFb4.speed = 12;
-            iconFb5.speed = 8; 
           });
+          angular.element('.closeTwitter').click(function(){
+            angular.element('#modalTwitter').iziModal('close');
+          })
         }
         clicCanvas();
 
@@ -34,10 +32,11 @@ angular.module('app')
         $window.mozRequestAnimationFrame || // Pour Firefox.
         $window.ORequestAnimationFrame || // Pour Opera.
         $window.msRequestAnimationFrame // Pour Internet Explorer.az
+        
 
         var canvasTwitter = angular.element('#canvasTwitter')[0]
         canvasTwitter.width = $window.innerWidth;
-        canvasTwitter.height = 250;
+        canvasTwitter.height = 500;
         var ctx = canvasTwitter.getContext('2d');
 
         function spriteTwitter (){
@@ -58,10 +57,8 @@ angular.module('app')
           this.mouvIcon = function(){
             this.dx -= this.speed; 
         $log.info(this.dx);
-            
             if(this.dx < -$window.innerWidth){
               this.dx = canvasTwitter.width;
-              $log.info('ici oiseau')
             }
           }
           this.spriteMouv = function(){ 
@@ -78,14 +75,13 @@ angular.module('app')
           sLargeur : 808,
           sHauteur : 174,
           dx : canvasTwitter.width,
-          dy : 40,
+          dy : 140,
           dLargeur : 808,
           dHauteur : 174,        
           mouvIcon : function(){
             this.dx -= this.speed; 
-            if(this.dx < -$window.innerWidth){
+            if(this.dx < -canvasTwitter.width){
               this.dx = canvasTwitter.width;
-               $log.info('ici bandeau')
             }
           }                  
         }
@@ -96,14 +92,14 @@ angular.module('app')
         var sprite1 = new spriteTwitter;
         sprite1.speed = 10;
         sprite1.dx = canvasTwitter.width;
-        sprite1.dy = 40;
+        sprite1.dy = 140;
         var sprite01 = new Image();
         sprite01.src = '../assets/images/spriteTwitter.png'; 
 
 
         function drawCanvas(){
           ctx.fillStyle="#FFFFFF";
-          ctx.fillRect(0,0,$window.innerWidth,250);
+          ctx.fillRect(0,0,$window.innerWidth,500);
           ctx.drawImage(bandeau, bandeauTwitter.sx, bandeauTwitter.sy, bandeauTwitter.sLargeur, bandeauTwitter.sHauteur, bandeauTwitter.dx, bandeauTwitter.dy, bandeauTwitter.dLargeur, bandeauTwitter.dHauteur)                                                                                                                                                                                                                                                                     
           ctx.drawImage(sprite01, sprite1.sx, sprite1.sy, sprite1.sLargeur, sprite1.sHauteur, sprite1.dx, sprite1.dy, sprite1.dLargeur, sprite1.dHauteur) 
         }
