@@ -1,30 +1,12 @@
 <footer class="row">
-    <div class="col-lg-6"></div>    
-    <div class="col-lg-6">
-        <form id="formulaireFooter" class="form-horizontal" name="registerForm" method="POST" ng-submit="main.sendMail()">
-            <div class="form-group">
-                <label class="col-md-3 control-label" for="nom">Nom</label>
-                <div class="col-lg-8 col-md-6">
-                    <input id="nom" type="text" class="form-control" name="nom" required="true" ng-model="main.contactName"/>
-                </div>
-            </div>            
-            <div class="form-group">
-                <label class="col-md-3 control-label" for="Email">Email</label>
-                <div class="col-lg-8 col-md-6">
-                    <input id="Email" type="email" class="form-control" name="Email" required="true" ng-model="main.contactEmail"/>
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-md-3 control-label" for="message">Votre message</label>
-                <div class="col-lg-8 col-md-6">
-                    <textarea id="message" type="text" class="form-control" name="message" ng-model="main.contactMessage"/>
-                </div> 
-            </div>
-            <div class="form-group">
-                <div class="col-md-offset-3 col-md-9">
-                    <input type="submit" class="btn btn-default" value="Envoyer" />
-                </div>
-            </div>
-        </form>
-    </div>    
+    <div class="col-lg-12 col-md-12">
+        <img class="me" src="assets/images/adrien.jpg" alt="Adrien Leteinturier" ng-init="displayEffectFooter('.me', '.social' ,'animated flipInY')" />
+        <div class="social">
+            <i id="github" onclick="window.open('https://github.com/Adrien-Leteinturier/')" class="fa fa-github fa-1x"></i>
+            <i id="facebook" onclick="window.open('https://www.facebook.com/AdrienDeveloper/')" class="fa fa-facebook-square fa-1x"></i>
+            <i id="linkedin" onclick="window.open('https://www.linkedin.com/in/adrien-leteinturier/')" class="fa fa-linkedin fa-1x"></i>
+            <i id="twitter" onclick="window.open('https://twitter.com/AdrienDeveloper')" class="fa fa-twitter-square fa-1x"></i>
+            <i id="mail" onClick="location.href='mailto:adrienleteinturier@gmail.com'" class="fa fa-envelope fa-1x"></i> 
+        </div>
+    </div>            
 </footer>
