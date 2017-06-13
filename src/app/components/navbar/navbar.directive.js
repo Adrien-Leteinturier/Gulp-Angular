@@ -21,9 +21,12 @@
     return directive;
 
     /** @ngInject */
-    function NavbarController(moment) {
+    function NavbarController($scope,moment,scrollSmoothService) {
       var vm = this;
 
+      $scope.smoothFunction = function(element) {
+        scrollSmoothService.scrollTo(element);
+      }
       // "vm.creationDate" is available by directive option "bindToController: true"
       vm.relativeDate = moment(vm.creationDate).fromNow();
       //Nav bar collapse//
