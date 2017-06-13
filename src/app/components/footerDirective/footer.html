@@ -1,5 +1,5 @@
 <footer class="row">
-    <div class="col-lg-12 col-md-12">
+    <div class="col-lg-6 col-md-6">
         <img class="me" src="assets/images/adrien.jpg" alt="Adrien Leteinturier" ng-init="displayEffectFooter('.me', '.social' ,'animated flipInY')" />
         <div class="social">
             <i id="github" onclick="window.open('https://github.com/Adrien-Leteinturier/')" class="fa fa-github fa-1x"></i>
@@ -8,5 +8,12 @@
             <i id="twitter" onclick="window.open('https://twitter.com/AdrienDeveloper')" class="fa fa-twitter-square fa-1x"></i>
             <i id="mail" onClick="location.href='mailto:adrienleteinturier@gmail.com'" class="fa fa-envelope fa-1x"></i> 
         </div>
-    </div>            
+    </div>      
+    <div class="col-md-6 col-lg-6" ng-init="displayEffectFooter('.me', 'ui-gmap-google-map' ,'animated flash')">
+        <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+            <ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id" click="onClick"></ui-gmap-marker>
+            <ui-gmap-window coords="marker.coords" options="windowOptions" show="activeModel.show"></ui-gmap-window>
+        </ui-gmap-google-map>
+    </div>
+          
 </footer>
