@@ -1,6 +1,9 @@
 @import "sass/variables.scss";
 @import "sass/mixin.scss";
 
+.acmeAnim{
+  font-size: 1.3em;
+}
 
 .acme-navbar-text{
   color: white;
@@ -29,7 +32,6 @@ a:hover, a:focus {
 .navbar-nav li:nth-child(1) a:hover {background-color:$yellow;color: $gray}
 .navbar-nav li:nth-child(2) a:hover {@include transition(background-color 1s .2s, color 2s);}
 .navbar-nav li:nth-child(2) a:hover {background-color:$saumon;color: $gray}
-.navbar-nav li:nth-child(3) a:hover {@include transition(background-color 1s .2s, color 2s);}
-.navbar-nav li:nth-child(3) a:hover {background-color:$purple;color: $gray}
+
 
     
