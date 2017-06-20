@@ -29,11 +29,12 @@
       <div class="col-lg-3 content-img" ng-repeat="awesomeThing in main.awesomeThings | orderBy:'rank'" >
         <img class="img-services img-responsive" ng-src="assets/images/{{ awesomeThing.logo }}" alt="{{ awesomeThing.title }}" ng-init="main.activeDisplayEffect('.img-services', '.img-services' ,'animated bounceInUp')">
         <div class="caption" ng-style="{ backgroundColor: awesomeThing.backGroundColor }" ng-init="main.activeDisplayEffect('.img-services', '.caption' ,'animated fadeInRight')">
-          <h3 ng-style="{ color: awesomeThing.colorTitle }">{{ awesomeThing.title }}</h3>
+          <h2 ng-style="{ color: awesomeThing.colorTitle }">{{ awesomeThing.title }}</h2>
           <p>{{ awesomeThing.description }}</p>
         </div>
       </div>
     </div>
   </section>
+  <pano-directive></pano-directive>
   <footer-directive></footer-directive>
 </div>
