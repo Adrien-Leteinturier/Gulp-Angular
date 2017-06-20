@@ -59,7 +59,7 @@ angular.module('app')
             model.show = !model.show;
             $scope.activeModel = model;
           };    
-          //Map ends//          
+          //Map ends//         
         }
       };
     });
