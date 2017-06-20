@@ -26,6 +26,10 @@ a:hover, a:focus {
   padding:$padding10;
 }
 
+.navbar-header a{
+  padding-left: 120px;
+}
+
 .navbar-nav li:nth-child(4) a {font-size: 1.3em;line-height: 24px;}
 
 .navbar-nav li:nth-child(1) a:hover {@include transition(background-color 1s .2s, color 2s);}
