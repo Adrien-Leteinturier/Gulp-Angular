@@ -24,14 +24,14 @@ a:hover, a:focus {
 }
 .navbar{
   padding:$padding10;
+  @include box-shadow( 0px 0px 5px gray);
 }
 
 .navbar-nav li:nth-child(4) a {font-size: 1.3em;line-height: 24px;}
-
-.navbar-nav li:nth-child(1) a:hover {@include transition(background-color 1s .2s, color 2s);}
-.navbar-nav li:nth-child(1) a:hover {background-color:$yellow;color: $gray}
-.navbar-nav li:nth-child(2) a:hover {@include transition(background-color 1s .2s, color 2s);}
-.navbar-nav li:nth-child(2) a:hover {background-color:$saumon;color: $gray}
+.navbar-nav li:nth-child(1) a:hover {@include transition(background-color 1s .1s, color 2s);}
+.navbar-nav li:nth-child(1) a:hover {background-color:$yellow;color: black}
+.navbar-nav li:nth-child(2) a:hover {@include transition(background-color 1s .1s, color 2s);}
+.navbar-nav li:nth-child(2) a:hover {background-color:$saumon;color: black}
 
 
     

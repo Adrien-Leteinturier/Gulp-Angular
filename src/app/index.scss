@@ -42,6 +42,19 @@ section{
   padding: 30px; 
 }
 
+#presentation > div {
+  background-color: $white;
+  padding: $paddingLRtext;
+  box-shadow: inset 0px 0px 5px grey;
+}
+
+#presentation > div > h1 > span:nth-child(1) {
+color: #616161;
+text-shadow: #e0e0e0 1px 1px 0;
+}
+
+
+
 #technos{
   padding: $paddingLRtext;
 }
@@ -96,6 +109,11 @@ section{
   img.pull-right {
     width: 50px;
   }
+}
+
+.container-img-partners{
+  height: 150px;
+  width: 300px;
 }
 
 

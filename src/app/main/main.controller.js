@@ -6,7 +6,7 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($http,$timeout, $log, webDevTec, toastr, displayEffectService, technoService) {
+  function MainController($http,$timeout, $log, webDevTec, toastr, displayEffectService, technoService, partnersService) {
     var vm = this;
 
     //Scroll Effect
@@ -25,6 +25,13 @@
     }
 
 
+    function getPartnersServ(){
+      vm.awesomePartners = partnersService.getPartnersServ();
+      angular.forEach(vm.awesomePartners, function(awesomePartners) {
+        awesomePartners.rank = Math.random();
+      });
+    }
+
     function getWebTechnoServ(){
       vm.awesomeTechs = technoService.getTechnoServ();
       angular.forEach(vm.awesomeTechs, function(awesomeTech) {
@@ -42,6 +49,7 @@
     function activate() {
       getWebDevTec();
       getWebTechnoServ();
+      getPartnersServ();
     }
     activate();
   }
