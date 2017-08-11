@@ -1,6 +1,13 @@
 {
   "name": "app",
   "version": "0.0.0",
+<<<<<<< HEAD
+=======
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "colors": "^1.1.2"
+  },
+>>>>>>> 44b88e29ea27a113d89915d1ef2b4ae5a3ecce2f
   "scripts": {
     "test": "gulp test"
   },
@@ -11,7 +18,7 @@
     "del": "~2.0.2",
     "eslint-plugin-angular": "~0.12.0",
     "estraverse": "~4.1.0",
-    "express": "^4.15.2",
+    "express": "^4.15.3",
     "gulp": "~3.9.0",
     "gulp-angular-filesort": "~1.1.1",
     "gulp-angular-templatecache": "~1.8.0",

@@ -1,6 +1,25 @@
 @import "sass/variables.scss";
 @import "sass/mixin.scss";
 
+
+.titleContact{
+  background-color: $lightGray;
+  padding: $paddingLRtext;
+  h1{
+    font-size: 1.8em;
+  }
+  p{
+    color: $saumon;
+    font-size: 2em;
+    font-weight: bold;
+  }
+}
+
+#formulaire{
+  display: $none;
+  margin-top: 6px;
+}
+
 footer{
     background: url('../assets/images/fond1.jpg'); 
     background-size: cover;
