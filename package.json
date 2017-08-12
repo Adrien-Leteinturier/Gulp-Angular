@@ -1,13 +1,10 @@
 {
   "name": "app",
   "version": "0.0.0",
-<<<<<<< HEAD
-=======
   "dependencies": {
     "body-parser": "^1.17.2",
     "colors": "^1.1.2"
   },
->>>>>>> 44b88e29ea27a113d89915d1ef2b4ae5a3ecce2f
   "scripts": {
     "test": "gulp test"
   },
@@ -59,6 +56,5 @@
   },
   "engines": {
     "node": ">=0.10.0"
-  },
-  "dependencies": {}
+  }
 }
