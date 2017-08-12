@@ -1,0 +1,103 @@
+@import "sass/variables.scss";
+@import "sass/mixin.scss";
+
+
+#partners div.row:nth-child(3){
+  margin-top: 60px;
+}
+
+.description-partners{
+  font-size: 22px;
+  color: $huguenin;
+}
+
+.description-partners + p > img{
+  margin-bottom: 7px;
+}
+
+.container-twitter, .container-facebook, .container-instagram{
+  margin-bottom: 20px;
+}
+
+
+.container-twitter:hover .round-twitter{
+  bottom: 134px;
+  @include box-shadow( -2px 27px 91px -16px rgba(0,0,0,0.8));
+  @include transition(all 0.5s ease);
+}
+
+.container-twitter:not(:hover) .round-twitter{
+  bottom: 124px;
+  @include transition(all 0.5s ease);
+}
+
+.container-facebook:hover .round-facebook{
+  bottom: 134px;
+  @include box-shadow( -2px 27px 91px -16px rgba(0,0,0,0.8));
+  @include transition(all 0.5s ease);
+}
+
+.container-facebook:not(:hover) .round-facebook{
+  bottom: 124px;
+  @include transition(all 0.5s ease);
+}
+
+.container-instagram:hover .round-instagram{
+  bottom: 134px;
+  @include box-shadow( -2px 27px 91px -16px rgba(0,0,0,0.8));
+  @include transition(all 0.5s ease);
+}
+
+.container-instagram:not(:hover) .round-instagram{
+  bottom: 124px;
+  @include transition(all 0.5s ease);
+}
+
+.round-instagram{
+  background: $instagram;
+}
+.round-twitter{
+  background-color: $twitter;
+}
+.round-facebook{
+  background-color: $facebook;
+}
+
+.round-instagram{
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  position: absolute;
+  left: 115px;
+  bottom: 100px;
+
+  img{
+    margin-top: 11px;
+  }
+}
+
+.round-facebook{
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  position: absolute;
+  left: 115px;
+  bottom: 100px;
+
+  img{
+    margin-top: 11px;
+  }
+}
+
+.round-twitter{
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  position: absolute;
+  left: 115px;
+  bottom: 100px;
+
+  img{
+    margin-top: 19px;
+  }
+}
