@@ -18,9 +18,9 @@
             link1: '',
             link2: '',
             link3: '',
-            imgLink1: 'assets/images/huguenin-facebook.jpg',
-            imgLink2: 'assets/images/huguenin-twitter.jpg',
-            imgLink3: 'assets/images/huguenin-insta.jpg',            
+            imgLink1: 'huguenin-facebook.jpg',
+            imgLink2: 'huguenin-twitter.jpg',
+            imgLink3: 'huguenin-insta.jpg',            
             colorBackground: ''
           }
         ];
