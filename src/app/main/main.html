@@ -3,7 +3,6 @@
   <div>
     <acme-navbar creation-date="main.creationDate"></acme-navbar>
   </div>
-
   <section id="presentation" class="text-center">
     <img ng-src="assets/images/dev-img-titre.png" alt="image developpeur fullstack javascript">
     <p class="lead">
@@ -35,52 +34,6 @@
       </div>
     </div>
   </section>
-  <section id="partners"  ng-repeat="awesomePartner in main.awesomePartners | orderBy:'rank'">
-    <div class="row">
-
-      
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="border: 1px solid black;">
-        <div class="row">
-          
-          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-            <img style="padding-left: 5px;" ng-src="{{ awesomePartner.logo }}" alt="">
-          </div>
-          <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 text-center">
-            <span>{{ awesomePartner.description }}</span>
-            <div class="row">
-              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                <div class="container-img-partners">
-                  <a href="">
-                    <img src="{{ awesomePartner.imgLink1 }}" alt="">
-                  </a>
-                </div>
-              </div>
-              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                <div class="container-img-partners">
-                  <a href="">
-                    <img src="{{ awesomePartner.imgLink2 }}" alt="">
-                  </a>
-                </div>
-              </div>
-              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                <div class="container-img-partners">
-                  <a href="">
-                    <img src="{{ awesomePartner.imgLink3 }}" alt="">
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>                            
-        </div>
-      </div>
-    </div>
-        
-      </div>
-      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-        
-      </div>
-
-    </div>
-  </section>
+  <partners-directive></partners-directive>
   <footer-directive></footer-directive>
 </div>
