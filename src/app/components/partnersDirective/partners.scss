@@ -6,6 +6,9 @@
   margin-top: 60px;
 }
 
+#partners div.row > div:focus{
+  outline:none;
+}
 .description-partners{
   font-size: 22px;
   color: $huguenin;
