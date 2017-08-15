@@ -1,12 +1,15 @@
-<section id="partners"  ng-repeat="awesomePartner in main.awesomePartners | orderBy:'rank'" ng-init="display = true">
+<section id="partners" ng-init="display = true">
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="border: 1px solid black;">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="row">
-                <div ng-click="display = false" ng-class="(display == false) ? 'col-xs-12 col-sm-12 col-md-12 col-lg-3 text-center animated fadeInRight' : 'col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center'">
-                    <img style="padding-left: 5px;" ng-src="{{ awesomePartner.logo }}" alt="{{ awesomePartner.description }}">
+                <div ng-click="display = false ; display1 = false" ng-class="(display == false) ? 'col-xs-12 col-sm-12 col-md-12 col-lg-3 text-center animated fadeInRight' : 'col-xs-12 col-sm-12 col-md-12 col-lg-6 text-center'">
+                    <img style="padding-left: 5px;" ng-src="{{ data[0].logoH }}" alt="{{ data[0].descriptionH }}">
                 </div>
+                <div ng-if="display" class="col-xs-12 col-sm-12 col-md-12 col-lg-6 text-center">
+                    <img style="padding-left: 5px;" ng-src="{{ data[1].logoK }}" alt="{{ data[1].descriptionK }}">
+                </div>                
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 text-center animated fadeInRight" ng-if="!display">
-                    <span class="description-partners"><strong>{{ awesomePartner.description }}</strong></span>
+                    <span class="description-partners"><strong>{{ data[0].descriptionH }}</strong></span>
                     <p>A fait confiance à <img src="assets/images/titre-page-p.png" alt="Adrien Leteinturier"> pour la création et la gestion de sa visibilité sur les réseaux sociaux</p>
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
@@ -15,7 +18,7 @@
                                 <div class="round-facebook hidden-xs hidden-sm hidden-md">
                                     <img src="assets/images/fb_icon_very_small.png" alt="bird-twitter"/>  
                                 </div>
-                                <img ng-src="assets/images/{{ awesomePartner.imgLink1 }}" alt="">
+                                <img ng-src="assets/images/{{ data[0].imgLink1H }}" alt="">
                                 </a>
                             </div>
                         </div>
@@ -25,7 +28,7 @@
                                     <div class="round-twitter hidden-xs hidden-sm hidden-md">
                                         <img src="assets/images/bird-twitter.png" alt="bird-twitter"/>  
                                     </div>  
-                                    <img ng-src="assets/images/{{ awesomePartner.imgLink2 }}" alt=""/>
+                                    <img ng-src="assets/images/{{ data[0].imgLink2H }}" alt=""/>
                                 </a>
                             </div>
                         </div>
@@ -35,7 +38,7 @@
                                     <div class="round-instagram hidden-xs hidden-sm hidden-md">
                                         <img src="assets/images/insta.png" alt="Instagram"/>  
                                     </div>                      
-                                    <img ng-src="assets/images/{{ awesomePartner.imgLink3 }}" alt="">
+                                    <img ng-src="assets/images/{{ data[0].imgLink3H }}" alt="">
                                 </a>
                             </div>
                         </div>
