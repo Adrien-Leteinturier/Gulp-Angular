@@ -1,5 +1,4 @@
 <div class="container-fluid">
-
   <div>
     <acme-navbar creation-date="main.creationDate"></acme-navbar>
   </div>
@@ -12,6 +11,13 @@
       <button type="button" class="btn btn-lg btn-success" ng-click="main.showToastr()">Git Hub</button>
     </p>
   </section>
+    
+  <button ng-click="openModal('#modalConfirm')" type="button" class="btn btn-default">Modal Confirm</button>
+  <button ng-click="openModal('#modalForm')" type="button" class="btn btn-default">Modal Form</button>
+  
+  <modal-directive init="modalConfirm" header-color="#e67e22" transition-in="flipInX" transition-out="fadeOutRight" padding="20px" width="450px" template="modal-confirm"></modal-directive>
+  <modal-directive init="modalForm" title="Contactez-moi" header-color="#e67e22" transition-in="flipInX" transition-out="fadeOutRight" padding="20px" width="450px" template="modal-form" icon="fa fa-telegram"></modal-directive>
+
   <section>
     <div id="technos" class="row">
       <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
