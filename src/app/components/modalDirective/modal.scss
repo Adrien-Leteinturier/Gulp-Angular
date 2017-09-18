@@ -1,0 +1,14 @@
+@import "sass/variables.scss";
+@import "sass/mixin.scss";
+
+.iziModal-header-title {
+  font-family: $workSan !important;
+  text-align: center !important;
+  font-weight: bold !important;
+  font-size: 20px !important;
+}
+
+.iziModal-header-icon{
+  font-size: 30px !important;
+  padding-right: 0px !important;  
+}
